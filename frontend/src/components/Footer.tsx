@@ -1,0 +1,73 @@
+import { useState } from "react"
+
+const Footer = () => {
+  // Helper component for icon with fallback
+  const IconWithFallback = ({ src, alt }: { src: string; alt: string }) => {
+    const [error, setError] = useState(false);
+    return error ? (
+      <span className="inline-block w-5 h-5 bg-white rounded-full" />
+    ) : (
+      <img
+        src={src}
+        alt={alt}
+        className="w-5 h-5 rounded-lg object-contain"
+        onError={() => setError(true)}
+      />
+    )
+  }
+
+  return (
+    <>
+      <div className="w-full min-h-screen bg-[url('/milky_background.png')] bg-contain bg-bottom bg-no-repeat" />
+      <div className="w-full bg-gradient-to-r from-[#9dabe4] to-[#afd0f9] text-white p-4 text-center">
+        <div className="flex flex-col md:flex-row justify-between items-center px-8 pt-8 gap-6 font-semibold text-white]">
+          {/* Contact Info */}
+          <div className="text-sm space-y-2">
+            <a
+              href="https://instagram.com/milkynailsbymoo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <IconWithFallback src="/icons/insta_icon.png" alt="Instagram" />
+              @milkynailsbymoo
+            </a>
+            <a
+              href="mailto:milkynailsbymoo@gmail.com"
+              className="flex items-center gap-2"
+            >
+              <IconWithFallback src="/icons/email_icon.png" alt="Email" />
+              milkynailsbymoo@gmail.com
+            </a>
+            <a
+              href="https://tiktok.com/@mooshley"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <IconWithFallback src="/icons/tiktok_icon.png" alt="TikTok" />
+              @mooshley
+            </a>
+            <div className="flex items-center gap-2">
+              <IconWithFallback src="/icons/phone_icon.png" alt="Phone Number" />
+              Available to booked clients
+            </div>
+          </div>
+          {/* Placeholder for any additional images or branding */}
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/minhtri-dev/milkynailsbymoo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="/icons/github.svg" alt="GitHub" className="w-12 h-12 rounded-lg" />
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Footer
