@@ -32,10 +32,10 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full z-50 flex items-center justify-between px-8 py-0 transition-colors duration-300 ${navBg} ${navText} ${navUnderline}`}
       onMouseEnter={() => {
-        if (!menuOpen) setIsHover(true)
+        if (window.innerWidth >= 1024 && !menuOpen) setIsHover(true)
       }}
       onMouseLeave={() => {
-        if (!menuOpen) setIsHover(false)
+        if (window.innerWidth >= 1024 && !menuOpen) setIsHover(false)
       }}
     >
       <div className="flex items-center gap-8 py-2">
@@ -43,7 +43,7 @@ const Navbar = () => {
           milkynailsbymoo
         </a>
         <button
-          className={`hidden md:inline-block px-6 py-1 rounded-lg border-2 font-bold bg-transparent transition-colors
+          className={`hidden lg:inline-block px-6 py-1 rounded-lg border-2 font-bold bg-transparent transition-colors
             ${
               isHome && isTop && !isHover
                 ? "border-white text-white hover:bg-white hover:text-black"
@@ -56,7 +56,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger for mobile */}
-      <div className="md:hidden flex items-center">
+      <div className="lg:hidden flex items-center">
         <button
           className="focus:outline-none"
           onClick={() => setMenuOpen((open) => !open)}
@@ -78,7 +78,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex gap-8">
+      <div className="hidden lg:flex gap-8">
         <a
           href="/"
           className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-[#282477] transition-all duration-200"
