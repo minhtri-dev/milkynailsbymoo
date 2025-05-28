@@ -26,12 +26,12 @@ const Navbar = () => {
       : "text-[#282477]"
   const navUnderline = 
     isHome && isTop && !isHover
-      ? "border-b-0" 
+      ? "border-b-1 border-white" 
       : "border-b-1 border-[#9dabe4]"
 
   return (
     <nav
-      className={`sticky top-0 z-50 flex items-center justify-between px-8 py-0 transition-colors duration-300 ${navBg} ${navText} ${navUnderline}`}
+      className={`fixed top-0 w-full z-50 flex items-center justify-between px-8 py-0 transition-colors duration-300 ${navBg} ${navText} ${navUnderline}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
