@@ -3,7 +3,7 @@ import { useState } from "react"
 const Footer = () => {
   // Helper component for icon with fallback
   const IconWithFallback = ({ src, alt }: { src: string; alt: string }) => {
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(false)
     return error ? (
       <span className="inline-block w-5 h-5 bg-white rounded-full" />
     ) : (
