@@ -31,8 +31,12 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 flex items-center justify-between px-8 py-0 transition-colors duration-300 ${navBg} ${navText} ${navUnderline}`}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      onMouseEnter={() => {
+        if (!menuOpen) setIsHover(true)
+      }}
+      onMouseLeave={() => {
+        if (!menuOpen) setIsHover(false)
+      }}
     >
       <div className="flex items-center gap-8 py-2">
         <a href="/" className="font-bold text-lg">
