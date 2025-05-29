@@ -19,9 +19,7 @@ const Footer = () => {
   return (
     <footer className="relative w-full pt-16">
       {/* SVG background, fixed to bottom */}
-      <div className="rip rip--top abs left right">
-        <img src="/milky_background.svg" alt="Footer Background" className="w-full h-auto" />
-      </div>
+      <img src="/milky_background.svg" alt="Footer Background" className="w-full h-auto" />
       {/* Footer content */}
       <div className="w-full bg-gradient-to-r from-[#9dabe4] to-[#afd0f9] text-white font-semibold p-4 text-center">
         <div className="relative z-10 max-w-6xl mx-auto px-6 pb-10 flex flex-col md:flex-row justify-between items-center gap-8">
@@ -57,7 +55,7 @@ const Footer = () => {
               Available to booked clients
             </div>
           </div>
-          {/* Branding or extra links */}
+          {/* GitHub */}
           <div className="flex gap-4">
             <a
               href="https://github.com/minhtri-dev/milkynailsbymoo"

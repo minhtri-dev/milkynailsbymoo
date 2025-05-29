@@ -10,26 +10,28 @@ const Home = () => {
         />
         {/* Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-        <h2 className="text-4xl font-bold mb-4">Need you nails decorated?</h2>
-        <p className="text-lg max-w-2xl pb-5">
-          I'm your cozy home nail tech located in the heart of Southeast Melbourne, offering Gel-X and BIAB services, specialising in intricate nail art
-        </p>
-        <a
-          href="/portfolio"
-          className="border-2 border-white text-white font-semibold py-3 px-10 rounded-lg text-lg bg-transparent hover:bg-white hover:text-[#232a6b] transition-all duration-200 tracking-widest uppercase"
-        >
-          View Portfolio
-        </a>
-  </div>
+          <div className="p-10">
+            <h2 className="text-4xl font-bold mb-4">Need you nails decorated?</h2>
+            <p className="text-lg max-w-2xl">
+              I'm your cozy home nail tech located in the heart of Southeast Melbourne, offering Gel-X and BIAB services, specialising in intricate nail art
+            </p>
+          </div>
+          <a
+            href="/portfolio"
+            className="border-2 border-white text-white font-semibold py-3 px-10 rounded-lg text-lg bg-transparent hover:bg-white hover:text-midnight tracking-widest uppercase"
+          >
+            View Portfolio
+          </a>
+        </div>
       </section>
 
       {/* About Moo Section */}
       <section id="about" className="pt-50 bg-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-10">
           {/* Text Content */}
           <div className="flex-1 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#232a6b]">Who is Moo?</h2>
-            <p className="text-lg lg:text-xl text-[#232a6b] leading-relaxed">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-midnight">Who is Moo?</h2>
+            <p className="text-lg lg:text-xl text-midnight leading-relaxed">
               Hi everyone! I'm Ashley, better known as Moo. I'm here to spread my love for decorating nails with beautiful art with all of you.
               I used to get my nails done at salons and leave unhappy with the results, mostly because I've been told no to certain designs I vibed with.
               So, I thought about it and realised, "I'm pretty sure I can do this myself." After deciding university was not for me,
@@ -46,24 +48,30 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
       {/* Request a Booking Section */}
       <section className="pt-70 bg-gradient-to-b from-white to-[#fff1e1] relative">
         <div className="max-w-xl mx-auto flex flex-col items-center text-center px-4">
-          <h2 className="text-3xl font-bold text-[#232a6b] pb-10">Request a Booking</h2>
+          <h2 className="text-3xl font-bold text-midnight pb-10">Request a Booking</h2>
           <a
             href="/services"
-            className="bg-[#232a6b] text-white font-semibold py-3 px-10 rounded-full text-lg hover:bg-[#3a47a8] transition"
+            className="bg-midnight text-white font-semibold py-3 px-10 rounded-full text-lg hover:bg-midnight-hover transition"
           >
             View services
           </a>
-          <span className="my-2 text-[#232a6b] font-bold text-lg">OR</span>
+          <span className="my-2 text-midnight font-bold text-lg">OR</span>
           <a
             href="/booking"
-            className="bg-[#232a6b] text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-[#3a47a8] transition"
+            className="bg-midnight text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-midnight-hover transition"
           >
             Book now
           </a>
-          <span className="text-xs text-[#232a6b] mt-1">View booking policy</span>
+          <a 
+            href="/booking-policy"
+            className="text-xs text-midnight mt-3"
+          >
+            View booking policy
+          </a>
         </div>
       </section>
     </>

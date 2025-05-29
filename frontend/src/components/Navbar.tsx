@@ -46,8 +46,8 @@ const Navbar = () => {
           className={`hidden lg:inline-block px-6 py-1 rounded-lg border-2 font-bold bg-transparent transition-colors
             ${
               isHome && isTop && !isHover
-                ? "border-white text-white hover:bg-white hover:text-black"
-                : "border-[#282477] text-[#282477] hover:bg-[#282477] hover:text-white"
+                ? "border-white text-white"
+                : "border-midnight text-midnight hover:bg-midnight hover:text-white"
             }
           `}
         >
@@ -81,31 +81,31 @@ const Navbar = () => {
       <div className="hidden lg:flex gap-8">
         <a
           href="/"
-          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-[#282477] transition-all duration-200"
+          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           home
         </a>
         <a
           href="/#about"
-          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-[#282477] transition-all duration-200"
+          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           about moo
         </a>
         <a
           href="#contact"
-          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-[#282477] transition-all duration-200"
+          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           contact
         </a>
         <a
           href="services"
-          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-[#282477] transition-all duration-200"
+          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           services
         </a>
         <a
           href="portfolio"
-          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-[#282477] transition-all duration-200"
+          className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           portfolio
         </a>
@@ -113,9 +113,9 @@ const Navbar = () => {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-[#fff1e1] flex flex-col items-center justify-center z-50 transition-all">
+        <div className="fixed inset-0 bg-cream flex flex-col items-center justify-center z-50">
           <button
-            className="absolute top-6 right-6 text-3xl text-[#282477] focus:outline-none"
+            className="absolute top-6 right-6 text-3xl text-midnight focus:outline-none"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
@@ -123,42 +123,42 @@ const Navbar = () => {
           </button>
           <a
             href="/"
-            className="block w-full text-center py-4 text-2xl font-semibold text-[#282477] hover:bg-[#d0e2ff] transition"
+            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             book now
           </a>
           <a
             href="/"
-            className="block w-full text-center py-4 text-2xl font-semibold text-[#282477] hover:bg-[#d0e2ff] transition"
+            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             home
           </a>
           <a
             href="/#about"
-            className="block w-full text-center py-4 text-2xl font-semibold text-[#282477] hover:bg-[#d0e2ff] transition"
+            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             about moo
           </a>
           <a
             href="#contact"
-            className="block w-full text-center py-4 text-2xl font-semibold text-[#282477] hover:bg-[#d0e2ff] transition"
+            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             contact
           </a>
           <a
             href="services"
-            className="block w-full text-center py-4 text-2xl font-semibold text-[#282477] hover:bg-[#d0e2ff] transition"
+            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             services
           </a>
           <a
             href="portfolio"
-            className="block w-full text-center py-4 text-2xl font-semibold text-[#282477] hover:bg-[#d0e2ff] transition"
+            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             portfolio
