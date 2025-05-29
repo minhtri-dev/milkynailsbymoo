@@ -18,11 +18,11 @@ const Navbar = () => {
   const navBg =
     isHome && isTop && !isHover
       ? "bg-transparent"
-      : "bg-[#e1efff]"
+      : "bg-baby-blue"
   const navText =
     isHome && isTop && !isHover
       ? "text-white"
-      : "text-[#282477]"
+      : "text-midnight"
   const navUnderline =
     isHome && isTop && !isHover
       ? "border-b-1 border-white"
@@ -115,7 +115,7 @@ const Navbar = () => {
       {menuOpen && (
         <div className="fixed inset-0 bg-cream flex flex-col items-center justify-center z-50">
           <button
-            className="absolute top-6 right-6 text-3xl text-midnight focus:outline-none"
+            className="absolute top-6 right-6 text-3xl focus:outline-none"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
@@ -123,42 +123,42 @@ const Navbar = () => {
           </button>
           <a
             href="/"
-            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
+            className="block w-full text-center py-4 text-2xl font-semibold hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             book now
           </a>
           <a
             href="/"
-            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
+            className="block w-full text-center py-4 text-2xl font-semibold hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             home
           </a>
           <a
             href="/#about"
-            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
+            className="block w-full text-center py-4 text-2xl font-semibold hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             about moo
           </a>
           <a
             href="#contact"
-            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
+            className="block w-full text-center py-4 text-2xl font-semibold hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             contact
           </a>
           <a
             href="services"
-            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
+            className="block w-full text-center py-4 text-2xl font-semibold hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             services
           </a>
           <a
             href="portfolio"
-            className="block w-full text-center py-4 text-2xl font-semibold text-midnight hover:bg-cream-hover"
+            className="block w-full text-center py-4 text-2xl font-semibold hover:bg-cream-hover"
             onClick={() => setMenuOpen(false)}
           >
             portfolio
