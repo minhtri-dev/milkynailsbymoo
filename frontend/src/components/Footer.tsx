@@ -3,7 +3,7 @@ import { useState } from "react"
 const Footer = () => {
   // Helper component for icon with fallback
   const IconWithFallback = ({ src, alt }: { src: string; alt: string }) => {
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(false)
     return error ? (
       <span className="inline-block w-5 h-5 bg-white rounded-full" />
     ) : (
@@ -17,12 +17,14 @@ const Footer = () => {
   }
 
   return (
-    <>
-      <div className="w-full min-h-screen bg-[url('/milky_background.png')] bg-contain bg-bottom bg-no-repeat" />
-      <div className="w-full bg-gradient-to-r from-[#9dabe4] to-[#afd0f9] text-white p-4 text-center">
-        <div className="flex flex-col md:flex-row justify-between items-center px-8 pt-8 gap-6 font-semibold text-white]">
+    <footer className="relative w-full pt-16">
+      {/* SVG background, fixed to bottom */}
+      <img src="/milky_background.svg" alt="Footer Background" className="w-full h-auto" />
+      {/* Footer content */}
+      <div className="w-full bg-gradient-to-r from-[#9dabe4] to-[#afd0f9] text-white font-semibold p-4 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-10 flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Contact Info */}
-          <div className="text-sm space-y-2">
+          <div id="contact" className="text-sm space-y-3 text-white">
             <a
               href="https://instagram.com/milkynailsbymoo"
               target="_blank"
@@ -53,20 +55,23 @@ const Footer = () => {
               Available to booked clients
             </div>
           </div>
-          {/* Placeholder for any additional images or branding */}
+          {/* GitHub */}
           <div className="flex gap-4">
             <a
               href="https://github.com/minhtri-dev/milkynailsbymoo"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/icons/github.svg" alt="GitHub" className="w-12 h-12 rounded-lg" />
+              <img src="/icons/github.svg" alt="GitHub" className="w-10 h-10 rounded-lg" />
             </a>
-            
           </div>
         </div>
+        {/* Copyright */}
+        <div className="relative z-10 text-xs text-white text-center pb-4">
+          &copy; {new Date().getFullYear()} milkynailsbymoo. All rights reserved.
+        </div>
       </div>
-    </>
+    </footer>
   )
 }
 
