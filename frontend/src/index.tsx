@@ -12,7 +12,6 @@ createRoot(document.getElementById('root')!).render(
         <Navbar />
         <Routes>
           <Route path="/" element={<Pages.Home />} />
-          <Route path="/booking-policy" element={<Pages.Policy />} />
         </Routes>
         <Footer />
       </BrowserRouter>
