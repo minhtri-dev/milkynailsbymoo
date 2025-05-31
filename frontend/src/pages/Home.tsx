@@ -1,4 +1,10 @@
+import { useState } from "react"
+
+import { PolicyModal } from "@components"
+
 const Home = () => {
+  const [policyOpen, setPolicyOpen] = useState(false)
+
   return (
     <>
       {/* Hero image section */}
@@ -66,14 +72,17 @@ const Home = () => {
           >
             Book now
           </a>
-          <a 
-            href="/booking-policy"
+          <button
+            type="button"
             className="text-xs text-midnight mt-3"
+            onClick={() => setPolicyOpen(true)}
           >
             View booking policy
-          </a>
+          </button>
         </div>
       </section>
+
+      <PolicyModal open={policyOpen} onClose={() => setPolicyOpen(false)} />
     </>
   )
 }
