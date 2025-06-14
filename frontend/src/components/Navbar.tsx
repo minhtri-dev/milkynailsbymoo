@@ -99,13 +99,13 @@ const Navbar = () => {
           contact
         </a>
         <a
-          href="services"
+          href="/services"
           className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           services
         </a>
         <a
-          href="portfolio"
+          href="/portfolio"
           className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           portfolio
