@@ -12,6 +12,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/" element={<Pages.Home />} />
           <Route path="/services" element={<Pages.Service />} />
           <Route path="/portfolio" element={<Pages.Portfolio />} />
+          <Route path="/booking" element={<Pages.Booking />} />
           <Route path="*" element={<Pages.NotFound />} />
         </Routes>
       </BrowserRouter>

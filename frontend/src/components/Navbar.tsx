@@ -42,7 +42,8 @@ const Navbar = () => {
         <a href="/" className="font-bold text-lg">
           milkynailsbymoo
         </a>
-        <button
+        <a
+          href="/booking"
           className={`hidden lg:inline-block px-6 py-1 rounded-lg border-2 font-bold bg-transparent transition-colors
             ${
               isHome && isTop && !isHover
@@ -52,7 +53,7 @@ const Navbar = () => {
           `}
         >
           book now
-        </button>
+        </a>
       </div>
 
       {/* Hamburger for mobile */}
