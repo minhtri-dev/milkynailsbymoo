@@ -17,7 +17,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative w-full pt-16">
+    <footer className="relative w-full bg-cream pt-16">
       {/* SVG background, fixed to bottom */}
       <img src="/milky_background.svg" alt="Footer Background" className="w-full h-auto" />
       {/* Footer content */}

@@ -13,6 +13,7 @@ const PolicyModal = ({ open, onClose }: { open: boolean, onClose: () => void }) 
           &times;
         </button>
         <h1 className="text-3xl font-bold my-6 text-center text-midnight">Policies</h1>
+        
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-3 text-midnight">Booking</h2>
           <ul className="list-disc list-inside space-y-2 text-midnight">
