@@ -4,7 +4,7 @@ const PolicyModal = ({ open, onClose }: { open: boolean, onClose: () => void }) 
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000073]">
       <div className="bg-white shadow-lg p-8 relative overflow-y-auto 
                       max-w-full max-h-full rounded-none 
-                      w-full h-full md:max-w-2xl md:h-auto md:rounded-xl">
+                      w-full h-full md:max-w-2xl md:max-h-[90vh] md:h-auto md:rounded-xl">
         <button
           className="absolute top-4 right-4 text-2xl text-midnight"
           onClick={onClose}
