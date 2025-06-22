@@ -60,24 +60,28 @@ const Service = () => {
             items={['basic nail art', 'ombre', 'marble', 'chrome', 'simple line art']}
             priceRange="$40 - 50"
             bgColor="bg-tier1"
+            imageUrl='/tiers/tier-1.jpg'
           />
           <ServiceCard
             tier="Tier 2"
             items={['blooming gel', 'auras', 'isolated chrome', 'gems and pearls', 'charms', 'advanced nail art (on some nails)']}
             priceRange="$60 - 75"
             bgColor="bg-tier2"
+            imageUrl='/tiers/tier-2.jpg'
           />
           <ServiceCard
             tier="Tier 3"
             items={['"pinterest nails"', 'custom designs', '3D gel art', 'multiple charms', 'intricate hand drawn art', 'advanced nail art (on all nails)']}
             priceRange="$80 - 95"
             bgColor="bg-tier3"
+            imageUrl='/tiers/tier-3.jpg'
           />
           <ServiceCard
             tier="Tier 4"
             items={['"pinterest nails"', 'custom designs', '3D gel art', 'multiple charms', 'intricate hand drawn art', 'advanced nail art (on all nails)']}
             priceRange="$80 - 95"
             bgColor="bg-tier4"
+            imageUrl='/tiers/tier-4.jpg'
           />
         </div>
         <div className="px-10 py-10 text-midnight block md:hidden cursor-pointer">
