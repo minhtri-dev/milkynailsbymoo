@@ -1,30 +1,34 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const Footer = () => {
   // Helper component for icon with fallback
   const IconWithFallback = ({ src, alt }: { src: string; alt: string }) => {
     const [error, setError] = useState(false)
     return error ? (
-      <span className="inline-block w-5 h-5 bg-white rounded-full" />
+      <span className="inline-block h-5 w-5 rounded-full bg-white" />
     ) : (
       <img
         src={src}
         alt={alt}
-        className="w-5 h-5 rounded-lg object-contain"
+        className="h-5 w-5 rounded-lg object-contain"
         onError={() => setError(true)}
       />
     )
   }
 
   return (
-    <footer className="relative w-full bg-cream pt-16">
+    <footer className="bg-cream relative w-full pt-16">
       {/* SVG background, fixed to bottom */}
-      <img src="/milky_background.svg" alt="Footer Background" className="w-full h-auto" />
+      <img
+        src="/milky_background.svg"
+        alt="Footer Background"
+        className="h-auto w-full"
+      />
       {/* Footer content */}
-      <div className="w-full bg-gradient-to-r from-[#9dabe4] to-[#afd0f9] text-white font-semibold p-4 text-center">
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pb-10 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="w-full bg-gradient-to-r from-[#9dabe4] to-[#afd0f9] p-4 text-center font-semibold text-white">
+        <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 pb-10 md:flex-row">
           {/* Contact Info */}
-          <div id="contact" className="text-sm space-y-3 text-white">
+          <div id="contact" className="space-y-3 text-sm text-white">
             <a
               href="https://instagram.com/milkynailsbymoo"
               target="_blank"
@@ -51,7 +55,10 @@ const Footer = () => {
               @mooshley
             </a>
             <div className="flex items-center gap-2">
-              <IconWithFallback src="/icons/phone_icon.png" alt="Phone Number" />
+              <IconWithFallback
+                src="/icons/phone_icon.png"
+                alt="Phone Number"
+              />
               Available to booked clients
             </div>
           </div>
@@ -62,13 +69,18 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/icons/github.svg" alt="GitHub" className="w-10 h-10 rounded-lg" />
+              <img
+                src="/icons/github.svg"
+                alt="GitHub"
+                className="h-10 w-10 rounded-lg"
+              />
             </a>
           </div>
         </div>
         {/* Copyright */}
-        <div className="relative z-10 text-xs text-white text-center pb-4">
-          &copy; {new Date().getFullYear()} milkynailsbymoo. All rights reserved.
+        <div className="relative z-10 pb-4 text-center text-xs text-white">
+          &copy; {new Date().getFullYear()} milkynailsbymoo. All rights
+          reserved.
         </div>
       </div>
     </footer>

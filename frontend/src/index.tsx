@@ -8,13 +8,13 @@ import * as Pages from './pages'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Pages.Home />} />
-          <Route path="/services" element={<Pages.Service />} />
-          <Route path="/portfolio" element={<Pages.Portfolio />} />
-          <Route path="/booking" element={<Pages.Booking />} />
-          <Route path="*" element={<Pages.NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Pages.Home />} />
+        <Route path="/services" element={<Pages.Service />} />
+        <Route path="/portfolio" element={<Pages.Portfolio />} />
+        <Route path="/booking" element={<Pages.Booking />} />
+        <Route path="*" element={<Pages.NotFound />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )

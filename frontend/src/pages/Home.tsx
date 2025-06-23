@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState } from 'react'
 
-import { PolicyModal } from "@components"
+import { PolicyModal } from '@components'
 import { Layout } from '@layouts'
 
 const Home = () => {
@@ -9,20 +9,23 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero image section */}
-
-      <section className="relative inset-0 w-full h-screen bg-cover bg-center bg-cream bg-no-repeat bg-[url('/home/milky_clients.png')]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#616161] from-26% to-[#a1988f] to-100% opacity-50 bg-transparent"/>
+      <section className="bg-cream relative inset-0 h-screen w-full bg-[url('/home/milky_clients.png')] bg-cover bg-center bg-no-repeat">
+        <div className="absolute inset-0 bg-transparent bg-gradient-to-b from-[#616161] from-26% to-[#a1988f] to-100% opacity-50" />
         {/* Overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
           <div className="p-10">
-            <h2 className="text-4xl font-bold mb-4">Need you nails decorated?</h2>
-            <p className="text-lg max-w-2xl">
-              I'm your cozy home nail tech located in the heart of Southeast Melbourne, offering Gel-X and BIAB services, specialising in intricate nail art
+            <h2 className="mb-4 text-4xl font-bold">
+              Need you nails decorated?
+            </h2>
+            <p className="max-w-2xl text-lg">
+              I'm your cozy home nail tech located in the heart of Southeast
+              Melbourne, offering Gel-X and BIAB services, specialising in
+              intricate nail art
             </p>
           </div>
           <a
             href="/portfolio"
-            className="border-2 border-white text-white font-semibold py-3 px-10 rounded-lg text-lg bg-transparent hover:bg-white hover:text-midnight tracking-widest uppercase"
+            className="hover:text-midnight rounded-lg border-2 border-white bg-transparent px-10 py-3 text-lg font-semibold tracking-widest text-white uppercase hover:bg-white"
           >
             View Portfolio
           </a>
@@ -30,49 +33,57 @@ const Home = () => {
       </section>
 
       {/* About Moo Section */}
-      <section id="about" className="pt-50 bg-background-light">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-10">
+      <section id="about" className="bg-background-light pt-50">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 px-10 lg:flex-row">
           {/* Text Content */}
           <div className="flex-1 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-midnight">Who is Moo?</h2>
-            <p className="text-lg lg:text-xl text-midnight leading-relaxed">
-              Hi everyone! I'm Ashley, better known as Moo. I'm here to spread my love for decorating nails with beautiful art with all of you.
-              I used to get my nails done at salons and leave unhappy with the results, mostly because I've been told no to certain designs I vibed with.
-              So, I thought about it and realised, "I'm pretty sure I can do this myself." After deciding university was not for me,
-              I signed up for a master class with Nail & Gel Academy, received my certificate, and have been honing my skills since.
+            <h2 className="text-midnight mb-6 text-3xl font-bold lg:text-4xl">
+              Who is Moo?
+            </h2>
+            <p className="text-midnight text-lg leading-relaxed lg:text-xl">
+              Hi everyone! I'm Ashley, better known as Moo. I'm here to spread
+              my love for decorating nails with beautiful art with all of you. I
+              used to get my nails done at salons and leave unhappy with the
+              results, mostly because I've been told no to certain designs I
+              vibed with. So, I thought about it and realised, "I'm pretty sure
+              I can do this myself." After deciding university was not for me, I
+              signed up for a master class with Nail & Gel Academy, received my
+              certificate, and have been honing my skills since.
             </p>
           </div>
           {/* Image */}
-          <div className="flex-1 flex justify-center lg:justify-end order-1 lg:order-2">
+          <div className="order-1 flex flex-1 justify-center lg:order-2 lg:justify-end">
             <img
               src="/home/moo_profile.png"
               alt=""
-              className="w-80 h-80 object-cover rounded-full shadow-lg"
+              className="h-80 w-80 rounded-full object-cover shadow-lg"
             />
           </div>
         </div>
       </section>
-      
+
       {/* Request a Booking Section */}
-      <section className="pt-70 bg-gradient-to-b from-background-light to-cream relative">
-        <div className="max-w-xl mx-auto flex flex-col items-center text-center px-4">
-          <h2 className="text-3xl font-bold text-midnight pb-10">Request a Booking</h2>
+      <section className="from-background-light to-cream relative bg-gradient-to-b pt-70">
+        <div className="mx-auto flex max-w-xl flex-col items-center px-4 text-center">
+          <h2 className="text-midnight pb-10 text-3xl font-bold">
+            Request a Booking
+          </h2>
           <a
             href="/services"
-            className="bg-midnight text-white font-semibold py-3 px-10 rounded-full text-lg hover:bg-midnight-hover transition"
+            className="bg-midnight hover:bg-midnight-hover rounded-full px-10 py-3 text-lg font-semibold text-white transition"
           >
             View services
           </a>
-          <span className="my-2 text-midnight font-bold text-lg">OR</span>
+          <span className="text-midnight my-2 text-lg font-bold">OR</span>
           <a
             href="/booking"
-            className="bg-midnight text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-midnight-hover transition"
+            className="bg-midnight hover:bg-midnight-hover rounded-full px-8 py-3 text-lg font-semibold text-white transition"
           >
             Book now
           </a>
           <button
             type="button"
-            className="text-xs text-midnight mt-3 cursor-pointer"
+            className="text-midnight mt-3 cursor-pointer text-xs"
             onClick={() => setPolicyOpen(true)}
           >
             View booking policy
