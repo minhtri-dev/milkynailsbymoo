@@ -14,7 +14,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageUrl
 }) => {
   return (
-    <div className="flex flex-col items-center rounded-sm bg-background pb-6 px-6 max-w-xs w-3xs">
+    <div className="flex flex-col items-center rounded-sm bg-background pb-6 px-6">
       <div className="justify-center mt-5">
         <img
           src={imageUrl}

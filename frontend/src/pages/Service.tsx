@@ -46,7 +46,7 @@ const Service = () => {
         <div>
           <h1 className="text-center text-midnight text-5xl font-bold mb-10 pt-20">Services</h1>
         </div>
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto px-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-4xl md:max-w-140 max-w-70 mx-auto px-4 mb-4">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -58,7 +58,7 @@ const Service = () => {
             />
           ))}
         </div>
-        <div className="px-10 py-10 text-midnight block md:hidden cursor-pointer">
+        {/* <div className="px-10 py-10 text-midnight block sm:hidden cursor-pointer">
           {services.map((type, index) => (
             <ServiceList
               key={index}
@@ -70,7 +70,7 @@ const Service = () => {
               onToggle={() => handleToggle(index)}
             />
           ))}
-        </div>
+        </div> */}
         <div className="text-center text-midnight text-sm italic">
           <p>• Solid colours are at a flat rate of $35</p>
           <p>• I do not charge per charm, they are included in the nail art tier price</p>

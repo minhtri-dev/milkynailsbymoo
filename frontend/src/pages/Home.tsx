@@ -71,7 +71,7 @@ const Home = () => {
           </a>
           <button
             type="button"
-            className="text-xs text-midnight mt-3"
+            className="text-xs text-midnight mt-3 cursor-pointer"
             onClick={() => setPolicyOpen(true)}
           >
             View booking policy
