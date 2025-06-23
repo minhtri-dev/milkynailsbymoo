@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero image section */}
-
       <section className="bg-cream relative inset-0 h-screen w-full bg-[url('/home/milky_clients.png')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-transparent bg-gradient-to-b from-[#616161] from-26% to-[#a1988f] to-100% opacity-50" />
         {/* Overlay */}

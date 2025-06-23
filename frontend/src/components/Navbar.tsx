@@ -109,7 +109,6 @@ const Navbar = () => {
         <a
           href="/portfolio"
           className="hover:border-b-midnight border-b-2 border-b-transparent px-2 pt-3 pb-3 font-semibold tracking-wide"
-        >
           portfolio
         </a>
       </div>

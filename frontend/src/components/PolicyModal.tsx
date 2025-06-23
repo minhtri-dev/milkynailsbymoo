@@ -19,7 +19,6 @@ const PolicyModal = ({
         <h1 className="text-midnight my-6 text-center text-3xl font-bold">
           Policies
         </h1>
-
         <section className="mb-8">
           <h2 className="text-midnight mb-3 text-xl font-semibold">Booking</h2>
           <ul className="text-midnight list-inside list-disc space-y-2">
