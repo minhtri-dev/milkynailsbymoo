@@ -4,41 +4,33 @@ import { Layout } from '@layouts';
 
 const services = [
   {
-    name: "solid colours",
-    price: "$35",
-    services: "solid colours are a flat rate of $35",
-    bgColor:""
-  },
-  {
-    name: "tier 1",
+    name: "Tier 1",
     price: "$40-50",
-    services: ["basic nail art", "ombre", "cat eye", "marble", "chrome", "french"],
-    bgColor:"bg-tier1"
+    services: ["Basic nail art", "Ombre", "Cat eye", "Marble", "Chrome", "French"],
+    bgColor: "bg-tier1",
+    imageUrl: '/tiers/tier-1.jpg'
   },
   {
-    name: "tier 2",
+    name: "Tier 2",
     price: "$60-75",
-    services: ["blooming gel", "auras", "isolated chrome", "gems and pearls", "intermediate nail art on some nails"],
-    bgColor:"bg-tier2"
+    services: ["Blooming gel", "Auras", "Isolated chrome", "Gems and pearls", "Intermediate nail art on some nails"],
+    bgColor: "bg-tier2",
+    imageUrl: '/tiers/tier-2.jpg'
   },
   {
-    name: "tier 3",
+    name: "Tier 3",
     price: "$80-95",
-    services: ["intricate hand drawn art", "each nail has a different design", "intermediate nail art on all nails"],
-    bgColor:"bg-tier3"
+    services: ["Intricate hand drawn art", "Each nail has a different design", "Intermediate nail art on all nails"],
+    bgColor: "bg-tier3",
+    imageUrl: '/tiers/tier-3.jpg'
   },
   {
-    name: "tier 4",
+    name: "Tier 4",
     price: "$100+",
-    services: ["pinterest nails", "custom designs", "3d gel art", "multiple charms", "intricate hand drawn art", "advanced nail art on all nails"],
-    bgColor:"bg-tier4"
+    services: ['"Pinterest" nails', "Custom designs", "3D gel art", "Multiple charms", "Intricate hand drawn art", "Advanced nail art on all nails"],
+    bgColor: "bg-tier4",
+    imageUrl: '/tiers/tier-4.jpg'
   },
-  // Additional services commented out
-  // {
-  //   name: "Promos",
-  //   price: "Varies",
-  //   services: ["Rates subject to change, no charge per charm"],
-  // },
 ];
 
 const Service = () => {
@@ -54,35 +46,17 @@ const Service = () => {
         <div>
           <h1 className="text-center text-midnight text-5xl font-bold mb-10 pt-20">Services</h1>
         </div>
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto px-4">
-          <ServiceCard
-            tier="Tier 1"
-            items={['basic nail art', 'ombre', 'marble', 'chrome', 'simple line art']}
-            priceRange="$40 - 50"
-            bgColor="bg-tier1"
-            imageUrl='/tiers/tier-1.jpg'
-          />
-          <ServiceCard
-            tier="Tier 2"
-            items={['blooming gel', 'auras', 'isolated chrome', 'gems and pearls', 'charms', 'advanced nail art (on some nails)']}
-            priceRange="$60 - 75"
-            bgColor="bg-tier2"
-            imageUrl='/tiers/tier-2.jpg'
-          />
-          <ServiceCard
-            tier="Tier 3"
-            items={['"pinterest nails"', 'custom designs', '3D gel art', 'multiple charms', 'intricate hand drawn art', 'advanced nail art (on all nails)']}
-            priceRange="$80 - 95"
-            bgColor="bg-tier3"
-            imageUrl='/tiers/tier-3.jpg'
-          />
-          <ServiceCard
-            tier="Tier 4"
-            items={['"pinterest nails"', 'custom designs', '3D gel art', 'multiple charms', 'intricate hand drawn art', 'advanced nail art (on all nails)']}
-            priceRange="$80 - 95"
-            bgColor="bg-tier4"
-            imageUrl='/tiers/tier-4.jpg'
-          />
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto px-4 mb-4">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              tier={service.name}
+              items={service.services}
+              priceRange={service.price}
+              bgColor={service.bgColor}
+              imageUrl={service.imageUrl}
+            />
+          ))}
         </div>
         <div className="px-10 py-10 text-midnight block md:hidden cursor-pointer">
           {services.map((type, index) => (
@@ -97,34 +71,36 @@ const Service = () => {
             />
           ))}
         </div>
-        <div className="text-center text-midnight text-sm">
-          <p>• rates are subject to change</p>
+        <div className="text-center text-midnight text-sm italic">
+          <p>• Solid colours are at a flat rate of $35</p>
+          <p>• I do not charge per charm, they are included in the nail art tier price</p>
+          <p>• Rates are subject to change, if deemed necessary</p>
         </div>
       
       </section>
       <section className="pt-20 bg-gradient-to-b text-midnight from-background-light to-cream relative">
         <div className="max-w-xl mx-auto flex flex-col px-4">
-          <h2 className="text-3xl font-bold pb-10 text-center">what to do after i have booked?</h2>
-          <h3 className="text-2xl font-bold pb-5 text-left">pre-appointment</h3>
+          <h2 className="text-3xl font-bold pb-10 text-center">What to do after I have booked?</h2>
+          <h3 className="text-2xl font-bold pb-5 text-left">Pre-appointment</h3>
           <ul className="text-left pb-10 list-disc ml-6">
-            <li>send inspiration pics or sketches at least one week in advance</li>
-            <li>i will confirm your design 48 hours prior to your appointment</li>
-            <li>let me know in advance if you want specific charms</li>
-            <li>i do not do foreign removals; please have bare, healthy nails or nails done by me</li>
-            <li>48 hours before, i will message you my location</li>
+            <li>Send inspiration pics or sketches at least one week in advance</li>
+            <li>I will confirm your design 48 hours prior to your appointment</li>
+            <li>Let me know in advance if you want specific charms</li>
+            <li>I do not do foreign removals; please have bare, healthy nails or nails done by me</li>
+            <li>48 hours before, I will message you my location</li>
           </ul>
-          <h2 className="text-2xl font-bold pb-5 text-left">appointment day</h2>
+          <h2 className="text-2xl font-bold pb-5 text-left">Appointment day</h2>
           <ul className="text-left pb-10 list-disc ml-6">
-            <li>arrive with clean hands and nails; apply sunscreen 20 minutes prior</li>
-            <li>i may refuse service if your nails are unsafe to work with</li>
-            <li>message me upon arrival and wait in your car until i call you in</li>
-            <li>let me know if you want a silent service or to chat</li>
-            <li>if unhappy during the appointment, let me know immediately</li>
-            <li>if you don't speak up during the appointment, i can't make changes</li>
+            <li>Arrive with clean hands and nails; apply sunscreen 20 minutes prior</li>
+            <li>I may refuse service if your nails are unsafe to work with</li>
+            <li>Message me upon arrival and wait in your car until I call you in</li>
+            <li>Let me know if you want a silent service or to chat</li>
+            <li>If unhappy during the appointment, let me know immediately</li>
+            <li>If you don't speak up during the appointment, I can't make changes</li>
           </ul>
-          <h2 className="text-2xl font-bold pb-5 text-left">post-appointment</h2>
+          <h2 className="text-2xl font-bold pb-5 text-left">Post-appointment</h2>
           <ul className="text-left pb-10 list-disc ml-6">
-            <li>if any nails come off within one week (my fault), message me for a free repair</li>
+            <li>If any nails come off within one week (my fault), message me for a free repair</li>
           </ul>
         </div>
       </section>
