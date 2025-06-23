@@ -42,7 +42,8 @@ const Navbar = () => {
         <a href="/" className="font-bold text-lg">
           milkynailsbymoo
         </a>
-        <button
+        <a
+          href="/booking"
           className={`hidden lg:inline-block px-6 py-1 rounded-lg border-2 font-bold bg-transparent transition-colors
             ${
               isHome && isTop && !isHover
@@ -52,7 +53,7 @@ const Navbar = () => {
           `}
         >
           book now
-        </button>
+        </a>
       </div>
 
       {/* Hamburger for mobile */}
@@ -98,13 +99,13 @@ const Navbar = () => {
           contact
         </a>
         <a
-          href="services"
+          href="/services"
           className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           services
         </a>
         <a
-          href="portfolio"
+          href="/portfolio"
           className="font-semibold tracking-wide px-2 pb-3 pt-3 border-b-2 border-b-transparent hover:border-b-midnight"
         >
           portfolio

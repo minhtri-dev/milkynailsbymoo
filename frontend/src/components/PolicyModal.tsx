@@ -4,7 +4,7 @@ const PolicyModal = ({ open, onClose }: { open: boolean, onClose: () => void }) 
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000073]">
       <div className="bg-white shadow-lg p-8 relative overflow-y-auto 
                       max-w-full max-h-full rounded-none 
-                      w-full h-full md:max-w-2xl md:h-auto md:rounded-xl">
+                      w-full h-full md:max-w-2xl md:max-h-[90vh] md:h-auto md:rounded-xl">
         <button
           className="absolute top-4 right-4 text-2xl text-midnight"
           onClick={onClose}
@@ -13,6 +13,7 @@ const PolicyModal = ({ open, onClose }: { open: boolean, onClose: () => void }) 
           &times;
         </button>
         <h1 className="text-3xl font-bold my-6 text-center text-midnight">Policies</h1>
+        
         <section className="mb-8">
           <h2 className="text-xl font-semibold mb-3 text-midnight">Booking</h2>
           <ul className="list-disc list-inside space-y-2 text-midnight">

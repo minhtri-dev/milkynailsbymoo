@@ -1,14 +1,16 @@
 import { useState } from "react"
 
 import { PolicyModal } from "@components"
+import { Layout } from '@layouts'
 
 const Home = () => {
   const [policyOpen, setPolicyOpen] = useState(false)
 
   return (
-    <>
+    <Layout>
       {/* Hero image section */}
-      <section className="relative inset-0 w-full h-screen bg-cover bg-center bg-no-repeat bg-[url('/home/milky_clients.png')]">
+
+      <section className="relative inset-0 w-full h-screen bg-cover bg-center bg-cream bg-no-repeat bg-[url('/home/milky_clients.png')]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#616161] from-26% to-[#a1988f] to-100% opacity-50 bg-transparent"/>
         {/* Overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
@@ -28,7 +30,7 @@ const Home = () => {
       </section>
 
       {/* About Moo Section */}
-      <section id="about" className="pt-50 bg-white">
+      <section id="about" className="pt-50 bg-background-light">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 px-10">
           {/* Text Content */}
           <div className="flex-1 text-center">
@@ -52,7 +54,7 @@ const Home = () => {
       </section>
       
       {/* Request a Booking Section */}
-      <section className="pt-70 bg-gradient-to-b from-white to-[#fff1e1] relative">
+      <section className="pt-70 bg-gradient-to-b from-background-light to-cream relative">
         <div className="max-w-xl mx-auto flex flex-col items-center text-center px-4">
           <h2 className="text-3xl font-bold text-midnight pb-10">Request a Booking</h2>
           <a
@@ -70,7 +72,7 @@ const Home = () => {
           </a>
           <button
             type="button"
-            className="text-xs text-midnight mt-3"
+            className="text-xs text-midnight mt-3 cursor-pointer"
             onClick={() => setPolicyOpen(true)}
           >
             View booking policy
@@ -79,7 +81,7 @@ const Home = () => {
       </section>
 
       <PolicyModal open={policyOpen} onClose={() => setPolicyOpen(false)} />
-    </>
+    </Layout>
   )
 }
 
