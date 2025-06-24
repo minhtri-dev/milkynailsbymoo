@@ -1,6 +1,6 @@
 import { Layout } from '@layouts'
 
-const NotFound = () => {
+const Portfolio = () => {
   return (
     <Layout>
       <section className="bg-cream h-screen bg-cover bg-center">
@@ -17,4 +17,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default Portfolio

@@ -1,6 +1,6 @@
 import { Layout } from '@layouts'
 
-const NotFound = () => {
+const Booking = () => {
   return (
     <Layout>
       <section className="bg-cream h-screen bg-cover bg-center">
@@ -29,4 +29,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default Booking
