@@ -125,7 +125,7 @@ const Navbar = () => {
             &times;
           </button>
           <a
-            href="/"
+            href="/booking"
             className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
@@ -153,14 +153,14 @@ const Navbar = () => {
             contact
           </a>
           <a
-            href="services"
+            href="/services"
             className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             services
           </a>
           <a
-            href="portfolio"
+            href="/portfolio"
             className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
