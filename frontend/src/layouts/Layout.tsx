@@ -7,11 +7,11 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <div className="flex flex-col">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

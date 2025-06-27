@@ -61,11 +61,11 @@ const Service = () => {
     <Layout>
       <section className="bg-background-light bg-cover bg-center">
         <div>
-          <h1 className="text-midnight mb-10 pt-20 text-center text-5xl font-bold">
+          <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
             Services
           </h1>
         </div>
-        <div className="mx-auto mb-4 grid max-w-70 grid-cols-1 gap-8 px-4 md:max-w-140 md:grid-cols-2 lg:max-w-4xl lg:grid-cols-3">
+        <div className="mx-auto mb-4 grid max-w-70 grid-cols-1 gap-8 px-4 md:max-w-140 md:grid-cols-2 lg:max-w-6xl lg:grid-cols-4">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
