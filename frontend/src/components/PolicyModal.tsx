@@ -10,7 +10,7 @@ const PolicyModal = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000073]">
       <div className="relative h-full max-h-full w-full max-w-full overflow-y-auto rounded-none bg-white p-8 shadow-lg md:h-auto md:max-h-[90vh] md:max-w-2xl md:rounded-xl">
         <button
-          className="text-midnight absolute top-4 right-4 text-2xl"
+          className="text-midnight absolute top-4 right-4 text-2xl hover:cursor-pointer"
           onClick={onClose}
           aria-label="Close"
         >
