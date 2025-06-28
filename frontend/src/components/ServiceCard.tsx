@@ -3,6 +3,7 @@ type ServiceCardProps = {
   items: string[]
   priceRange: string
   imageUrl: string
+  description: string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -10,6 +11,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   items,
   priceRange,
   imageUrl,
+  description
 }) => {
   return (
     <div className="bg-background flex flex-col items-center rounded-sm px-6 pb-6">
@@ -21,10 +23,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           className="h-50 w-50 rounded-full object-cover"
         />
       </div>
-
+      
       {/* Tier Banner */}
-      <div className="text-midnight w-full py-3 text-center text-lg font-bold">
+      <div className="text-midnight w-full pt-3 text-center text-lg font-bold">
         {tier}
+      </div>
+
+      {/* Description */}
+      <div className="text-midnight w-full text-center text-sm">
+        {description}
       </div>
 
       {/* Items */}
