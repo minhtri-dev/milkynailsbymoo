@@ -5,6 +5,7 @@ const services = [
   {
     name: 'Tier 1',
     price: '$40-50',
+    description: '1-2 hours',
     services: [
       'Basic nail art',
       'Ombre',
@@ -19,6 +20,7 @@ const services = [
   {
     name: 'Tier 2',
     price: '$60-75',
+    description: '2-3 hours',
     services: [
       'Blooming gel',
       'Auras',
@@ -32,6 +34,7 @@ const services = [
   {
     name: 'Tier 3',
     price: '$80-95',
+    description: '3-4 hours',
     services: [
       'Intricate hand drawn art',
       'Each nail has a different design',
@@ -43,6 +46,7 @@ const services = [
   {
     name: 'Tier 4',
     price: '$100+',
+    description: '4+ hours',
     services: [
       '"Pinterest" nails',
       'Custom designs',
@@ -73,6 +77,7 @@ const Service = () => {
               items={service.services}
               priceRange={service.price}
               imageUrl={service.imageUrl}
+              description={service.description}
             />
           ))}
         </div>
