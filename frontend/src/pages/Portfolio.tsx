@@ -1,5 +1,6 @@
 import { Layout } from '@layouts'
 
+//TODO: Change to use instagram photos for images
 const Portfolio = () => {
   return (
     <Layout>
@@ -7,103 +8,22 @@ const Portfolio = () => {
         <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
           Portfolio
         </h1>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 max-w-6xl mx-auto p-5">
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+        <div className="max-w-140 md:max-w-4xl mx-auto columns-2 md:columns-4 p-4 gap-4 space-y-4">
+          <img className="rounded-xl shadow w-[232px] h-[290px] object-cover" src="./portfolio/client_1.webp" alt="Image 01" />
+          <img className="rounded-xl shadow w-[232px] h-[290px] object-cover" src="./portfolio/client_2.webp" alt="Image 02" />
+          <img className="rounded-xl shadow w-[232px] h-[174px] object-cover" src="./portfolio/client_3.webp" alt="Image 03" />
+          <img className="rounded-xl shadow w-[232px] h-[155px] object-cover" src="./portfolio/client_4.webp" alt="Image 04" />
+          <img className="rounded-xl shadow w-[232px] h-[349px] object-cover" src="./portfolio/client_5.webp" alt="Image 05" />
+          <img className="rounded-xl shadow w-[232px] h-[250px] object-cover" src="./portfolio/client_6.webp" alt="Image 06" />
+          <img className="rounded-xl shadow w-[232px] h-[349px] object-cover" src="./portfolio/client_7.webp" alt="Image 07" />
+          <img className="rounded-xl shadow w-[232px] h-[155px] object-cover" src="./portfolio/client_8.webp" alt="Image 08" />
+          <img className="rounded-xl shadow w-[232px] h-[250px] object-cover" src="./portfolio/client_9.webp" alt="Image 09" />
+          <img className="rounded-xl shadow w-[232px] h-[290px] object-cover" src="./portfolio/client_10.webp" alt="Image 10" />
+          <img className="rounded-xl shadow w-[232px] h-[155px] object-cover" src="./portfolio/client_11.webp" alt="Image 11" />
+          <img className="rounded-xl shadow w-[232px] h-[309px] object-cover" src="./portfolio/client_12.webp" alt="Image 12" />
         </div>
       </section>
     </Layout>
   )
 }
-
 export default Portfolio
