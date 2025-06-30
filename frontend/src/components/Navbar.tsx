@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
 
 const Navbar = () => {
   const [isTop, setIsTop] = useState(true)
   const [isHover, setIsHover] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setIsTop(window.scrollY < 10)
@@ -36,14 +37,16 @@ const Navbar = () => {
         <img
           src="/white_logo_transparent.png"
           alt="White Logo"
-          className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'} cursor-pointer`}
           width={50}
+          onClick={() => navigate('/')}
         />
         <img
           src="/blue_logo_transparent.png"
           alt="Blue Logo"
-          className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'} cursor-pointer`}
           width={50}
+          onClick={() => navigate('/')}
         />
         <a href="/" className="ml-12 text-lg font-bold">
           milkynailsbymoo
