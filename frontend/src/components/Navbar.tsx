@@ -21,10 +21,12 @@ const Navbar = () => {
     isHome && isTop && !isHover
       ? 'border-b-1 border-white'
       : 'border-b-1 border-[#9dabe4]'
+  const logoSrc =
+    isHome && isTop && !isHover ? '/white_logo_transparent.png' : '/blue_logo_transparent.png'
 
   return (
     <nav
-      className={`fixed top-0 z-50 flex w-full items-center justify-between px-8 py-0 transition-colors duration-300 ${navBg} ${navText} ${navUnderline}`}
+      className={`fixed top-0 z-50 flex w-full items-center justify-between px-8 transition-colors duration-500 ${navBg} ${navText} ${navUnderline}`}
       onMouseEnter={() => {
         if (window.innerWidth >= 1024 && !menuOpen) setIsHover(true)
       }}
@@ -32,13 +34,25 @@ const Navbar = () => {
         if (window.innerWidth >= 1024 && !menuOpen) setIsHover(false)
       }}
     >
-      <div className="flex items-center gap-8 py-2">
-        <a href="/" className="text-lg font-bold">
+      <div className="flex items-center">
+        <img
+            src="/white_logo_transparent.png"
+            alt="White Logo"
+            className={`absolute transition-opacity duration-500 ${               isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'             }`}
+             width={50}
+          />
+          <img
+            src="/blue_logo_transparent.png"
+            alt="Blue Logo"
+            className={`absolute transition-opacity duration-500 ${               isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'             }`}
+             width={50}
+          />
+        <a href="/" className="text-lg font-bold ml-12">
           milkynailsbymoo
         </a>
         <a
           href="/booking"
-          className={`hidden rounded-lg border-2 bg-transparent px-6 py-1 font-bold transition-colors lg:inline-block ${
+          className={`ml-6 hidden rounded-lg border-2 bg-transparent px-6 py-1 transition-all duration-500 font-bold lg:inline-block ${
             isHome && isTop && !isHover
               ? 'border-white text-white'
               : 'border-midnight text-midnight hover:bg-midnight hover:text-white'
@@ -49,7 +63,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger for mobile */}
-      <div className="flex items-center lg:hidden">
+      <div className="flex items-center lg:hidden py-2">
         <button
           className="focus:outline-none"
           onClick={() => setMenuOpen((open) => !open)}
@@ -84,31 +98,31 @@ const Navbar = () => {
       <div className="hidden gap-8 lg:flex">
         <a
           href="/"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 pt-3 pb-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
         >
           home
         </a>
         <a
           href="/#about"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 pt-3 pb-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
         >
           about moo
         </a>
         <a
           href="#contact"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 pt-3 pb-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
         >
           contact
         </a>
         <a
           href="/services"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 pt-3 pb-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
         >
           services
         </a>
         <a
           href="/portfolio"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 pt-3 pb-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
         >
           portfolio
         </a>
