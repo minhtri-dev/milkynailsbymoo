@@ -77,11 +77,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        {/* Copyright */}
-        <div className="relative z-10 pb-4 text-center text-xs text-white">
-          &copy; {new Date().getFullYear()} milkynailsbymoo. All rights
-          reserved.
-        </div>
       </div>
     </footer>
   )
