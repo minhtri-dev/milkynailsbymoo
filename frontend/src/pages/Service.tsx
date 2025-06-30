@@ -81,19 +81,6 @@ const Service = () => {
             />
           ))}
         </div>
-        {/* <div className="px-10 py-10 text-midnight block sm:hidden cursor-pointer">
-          {services.map((type, index) => (
-            <ServiceList
-              key={index}
-              name={type.name}
-              price={type.price}
-              services={type.services}
-              bgColor={type.bgColor}
-              isOpen={openIndex === index}
-              onToggle={() => handleToggle(index)}
-            />
-          ))}
-        </div> */}
         <div className="text-midnight text-center text-sm italic">
           <p>• Solid colours are at a flat rate of $35</p>
           <p>
