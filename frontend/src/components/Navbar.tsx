@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 flex w-full items-center justify-between px-8 transition-colors duration-500 ${navBg} ${navText} ${navUnderline}`}
+      className={`fixed top-0 z-50 flex w-full items-center justify-between px-4 transition-colors duration-500 ${navBg} ${navText} ${navUnderline}`}
       onMouseEnter={() => {
         if (window.innerWidth >= 1024 && !menuOpen) setIsHover(true)
       }}
