@@ -128,9 +128,9 @@ const Navbar = () => {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="bg-cream fixed inset-0 z-50 flex flex-col items-center justify-center">
+        <div className="from-background-light to-cream bg-gradient-to-b fixed inset-0 z-50 flex flex-col items-center justify-center">
           <button
-            className="absolute top-6 right-6 text-3xl focus:outline-none"
+            className="absolute top-6 right-6 text-3xl focus:outline-none text-midnight"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
@@ -138,42 +138,42 @@ const Navbar = () => {
           </button>
           <a
             href="/booking"
-            className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
+            className="hover:bg-background text-midnight block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             book now
           </a>
           <a
             href="/"
-            className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
+            className="hover:bg-background text-midnight block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             home
           </a>
           <a
             href="/#about"
-            className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
+            className="hover:bg-background text-midnight block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             about moo
           </a>
           <a
             href="#contact"
-            className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
+            className="hover:bg-background text-midnight block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             contact
           </a>
           <a
             href="/services"
-            className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
+            className="hover:bg-background text-midnight block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             services
           </a>
           <a
             href="/portfolio"
-            className="hover:bg-cream-hover block w-full py-4 text-center text-2xl font-semibold"
+            className="hover:bg-background text-midnight block w-full py-4 text-center text-2xl font-semibold"
             onClick={() => setMenuOpen(false)}
           >
             portfolio
