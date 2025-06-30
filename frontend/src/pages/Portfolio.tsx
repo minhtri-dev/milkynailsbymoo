@@ -8,7 +8,7 @@ const Portfolio = () => {
         <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
           Portfolio
         </h1>
-        <div className="mx-auto max-w-140 columns-2 gap-4 space-y-4 p-4 md:max-w-4xl md:columns-4">
+        <div className="mx-auto max-w-120 columns-2 gap-4 space-y-4 p-4 md:max-w-4xl md:columns-4">
           <img
             className="h-[290px] w-[232px] rounded-md object-cover"
             src="./portfolio/client_1.webp"
