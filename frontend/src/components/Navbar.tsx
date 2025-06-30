@@ -39,14 +39,14 @@ const Navbar = () => {
           alt="White Logo"
           className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'} cursor-pointer`}
           width={50}
-          onClick={() => navigate('/')}
+          onClick={() => void navigate('/')}
         />
         <img
           src="/blue_logo_transparent.png"
           alt="Blue Logo"
           className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'} cursor-pointer`}
           width={50}
-          onClick={() => navigate('/')}
+          onClick={() => void navigate('/')}
         />
         <a href="/" className="ml-12 text-lg font-bold">
           milkynailsbymoo
@@ -99,31 +99,31 @@ const Navbar = () => {
       <div className="hidden gap-8 lg:flex">
         <a
           href="/"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide transition-[border-color] duration-500"
         >
           home
         </a>
         <a
           href="/#about"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide transition-[border-color] duration-500"
         >
           about moo
         </a>
         <a
           href="#contact"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide transition-[border-color] duration-500"
         >
           contact
         </a>
         <a
           href="/services"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide transition-[border-color] duration-500"
         >
           services
         </a>
         <a
           href="/portfolio"
-          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide"
+          className="hover:border-b-midnight border-b-2 border-b-transparent px-2 py-3 font-semibold tracking-wide transition-[border-color] duration-500"
         >
           portfolio
         </a>
