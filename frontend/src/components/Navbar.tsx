@@ -128,9 +128,9 @@ const Navbar = () => {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="from-background-light to-cream bg-gradient-to-b fixed inset-0 z-50 flex flex-col items-center justify-center">
+        <div className="from-background-light to-cream fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b">
           <button
-            className="absolute top-6 right-6 text-3xl focus:outline-none text-midnight"
+            className="text-midnight absolute top-6 right-6 text-3xl focus:outline-none"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
