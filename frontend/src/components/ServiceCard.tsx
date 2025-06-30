@@ -11,7 +11,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   items,
   priceRange,
   imageUrl,
-  description
+  description,
 }) => {
   return (
     <div className="bg-background flex flex-col items-center rounded-sm px-6 pb-6">
@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           className="h-50 w-50 rounded-full object-cover"
         />
       </div>
-      
+
       {/* Tier Banner */}
       <div className="text-midnight w-full pt-3 text-center text-lg font-bold">
         {tier}
@@ -48,6 +48,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     </div>
   )
 }
-
 
 export default ServiceCard

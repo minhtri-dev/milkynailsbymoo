@@ -21,8 +21,6 @@ const Navbar = () => {
     isHome && isTop && !isHover
       ? 'border-b-1 border-white'
       : 'border-b-1 border-[#9dabe4]'
-  const logoSrc =
-    isHome && isTop && !isHover ? '/white_logo_transparent.png' : '/blue_logo_transparent.png'
 
   return (
     <nav
@@ -36,23 +34,23 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <img
-            src="/white_logo_transparent.png"
-            alt="White Logo"
-            className={`absolute transition-opacity duration-500 ${               isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'             }`}
-             width={50}
-          />
-          <img
-            src="/blue_logo_transparent.png"
-            alt="Blue Logo"
-            className={`absolute transition-opacity duration-500 ${               isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'             }`}
-             width={50}
-          />
-        <a href="/" className="text-lg font-bold ml-12">
+          src="/white_logo_transparent.png"
+          alt="White Logo"
+          className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'}`}
+          width={50}
+        />
+        <img
+          src="/blue_logo_transparent.png"
+          alt="Blue Logo"
+          className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'}`}
+          width={50}
+        />
+        <a href="/" className="ml-12 text-lg font-bold">
           milkynailsbymoo
         </a>
         <a
           href="/booking"
-          className={`ml-6 hidden rounded-lg border-2 bg-transparent px-6 py-1 transition-all duration-500 font-bold lg:inline-block ${
+          className={`ml-6 hidden rounded-lg border-2 bg-transparent px-6 py-1 font-bold transition-all duration-500 lg:inline-block ${
             isHome && isTop && !isHover
               ? 'border-white text-white'
               : 'border-midnight text-midnight hover:bg-midnight hover:text-white'
@@ -63,7 +61,7 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger for mobile */}
-      <div className="flex items-center lg:hidden py-2">
+      <div className="flex items-center py-2 lg:hidden">
         <button
           className="focus:outline-none"
           onClick={() => setMenuOpen((open) => !open)}
