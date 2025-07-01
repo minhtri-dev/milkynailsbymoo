@@ -57,7 +57,7 @@ const Home = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
           <div className="p-10">
             <h2 className="mb-4 text-4xl font-bold">
-              Need you nails decorated?
+              Need your nails decorated?
             </h2>
             <p className="max-w-2xl text-lg">
               I'm your cozy home nail tech located in the heart of Southeast
