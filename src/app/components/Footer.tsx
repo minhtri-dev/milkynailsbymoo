@@ -23,14 +23,22 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <ImgFallback src="/icons/insta_icon.png" img_size={20} placeholder_size="w-3 h-3"/>
+              <ImgFallback
+                src="/icons/insta_icon.png"
+                img_size={20}
+                placeholder_size="w-3 h-3"
+              />
               @milkynailsbymoo
             </a>
             <a
               href="mailto:milkynailsbymoo@gmail.com"
               className="flex items-center gap-2"
             >
-              <ImgFallback src="/icons/email_icon.png" img_size={20} placeholder_size="w-3 h-3"/>
+              <ImgFallback
+                src="/icons/email_icon.png"
+                img_size={20}
+                placeholder_size="w-3 h-3"
+              />
               milkynailsbymoo@gmail.com
             </a>
             <a
@@ -39,11 +47,19 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
-              <ImgFallback src="/icons/tiktok_icon.png" img_size={20} placeholder_size="w-3 h-3"/>
+              <ImgFallback
+                src="/icons/tiktok_icon.png"
+                img_size={20}
+                placeholder_size="w-3 h-3"
+              />
               @mooshley
             </a>
             <div className="flex items-center gap-2">
-              <ImgFallback src="/icons/phone_icon.png" img_size={20} placeholder_size="w-3 h-3"/>
+              <ImgFallback
+                src="/icons/phone_icon.png"
+                img_size={20}
+                placeholder_size="w-3 h-3"
+              />
               Available to booked clients
             </div>
           </div>

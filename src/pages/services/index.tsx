@@ -122,7 +122,8 @@ const Service = () => {
             <li>Let me know if you want a silent service or to chat</li>
             <li>If unhappy during the appointment, let me know immediately</li>
             <li>
-              If you don&apos;t speak up during the appointment, I can&apos;t make changes
+              If you don&apos;t speak up during the appointment, I can&apos;t
+              make changes
             </li>
           </ul>
           <h2 className="pb-5 text-left text-2xl font-bold">

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-
 interface ImgWithFallbackProps {
   src: string
   l: string

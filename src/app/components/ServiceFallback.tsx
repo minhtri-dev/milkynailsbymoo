@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function ServiceFallback ({ src }: { src: string }) {
+export default function ServiceFallback({ src }: { src: string }) {
   const [hasLoaded, setHasLoaded] = useState(false)
   const [error, setError] = useState(false)
 

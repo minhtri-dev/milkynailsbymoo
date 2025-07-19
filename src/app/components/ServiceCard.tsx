@@ -20,7 +20,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="bg-background flex flex-col items-center rounded-sm px-6 pb-6">
       <div className="-mx-6 mt-5 flex justify-center">
-        <ServiceFallback src={imageUrl}/>
+        <ServiceFallback src={imageUrl} />
       </div>
       <div className="text-midnight w-full pt-3 text-center text-lg font-bold">
         {tier}
