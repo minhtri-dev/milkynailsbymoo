@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #f6eee5;
+  --color-background-light: #fffcf6;
+  --color-cream: #fff1e1;
+  --color-cream-light: #fff7ef;
+  --color-cream-hover: #ffedd6;
+  --color-midnight: #232a6b;
+  --color-midnight-hover: #3a47a8;
+  --color-baby-blue: #e1efff;
+  --color-tier1: #d2e6f7;
+  --color-tier2: #bdd0ff;
+  --color-tier3: #ceb7e5;
+  --color-tier4: #dcaacc;
+}
+
+body {
+  background-color: #fff1e1;
+  /* background: linear-gradient(to right, #9dabe4, #afd0f9); */
+}
