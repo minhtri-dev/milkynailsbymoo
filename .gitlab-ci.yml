@@ -10,7 +10,6 @@ variables:
 default:
   image: node:${NODE_VERSION}
   before_script:
-    - cd frontend
     - npm ci
 
 install_dependencies:
