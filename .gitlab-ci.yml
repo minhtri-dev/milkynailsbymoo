@@ -4,7 +4,6 @@ stages:
   - build
 
 variables:
-  NODE_ENV: development
   NODE_VERSION: "22"
 
 default:
