@@ -1,4 +1,4 @@
-import { ServiceCard, Layout } from '@components'
+import { ServiceCard} from '@components'
 
 const services = [
   {
@@ -61,7 +61,7 @@ const services = [
 
 const Service = () => {
   return (
-    <Layout>
+    <>
       <section className="bg-background-light bg-cover bg-center">
         <div>
           <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
@@ -137,7 +137,7 @@ const Service = () => {
           </ul>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

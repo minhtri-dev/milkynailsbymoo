@@ -3,13 +3,13 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-import { PolicyModal, Layout, ImgFallback } from '@components'
+import { PolicyModal, ImgFallback } from '@components'
 
 export default function Home() {
   const [policyOpen, setPolicyOpen] = useState(false)
 
   return (
-    <Layout>
+    <>
       <section className="bg-cream relative inset-0 h-screen w-full bg-[url('/home/milky_clients.png')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-transparent bg-gradient-to-b from-[#616161] from-26% to-[#a1988f] to-100% opacity-50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
@@ -87,6 +87,6 @@ export default function Home() {
         </div>
       </section>
       <PolicyModal open={policyOpen} onClose={() => setPolicyOpen(false)} />
-    </Layout>
+    </>
   )
 }

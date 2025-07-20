@@ -1,3 +1,6 @@
+import '@styles/globals.css'
+import { Navbar, Footer } from '@components'
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+        <head>
+            <title>Milky Nails by Moo</title>
+            <meta name="viewport" content="width=device-width" />
+            <link rel="icon" href="/blue_logo_transparent_crop.png" />
+        </head>
+        <Navbar />
+            <body>
+            {children}
+            </body>
+        <Footer />
     </html>
   )
 }

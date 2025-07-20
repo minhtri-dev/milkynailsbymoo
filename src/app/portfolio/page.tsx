@@ -1,4 +1,4 @@
-import { Layout, PortfolioFallback } from '@components'
+import { PortfolioFallback } from '@components'
 
 const images = [
   { src: '/portfolio/client_1.webp', l: 'h-[290px]' },
@@ -18,7 +18,6 @@ const images = [
 // TODO: Change to use Instagram photos for images
 const Portfolio = () => {
   return (
-    <Layout>
       <section className="from-background-light to-cream relative bg-gradient-to-b">
         <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
           Portfolio
@@ -29,7 +28,6 @@ const Portfolio = () => {
           ))}
         </div>
       </section>
-    </Layout>
   )
 }
 
