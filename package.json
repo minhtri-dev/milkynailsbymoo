@@ -16,10 +16,12 @@
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.7.0"
+    "react-router": "^7.7.0",
+    "square": "^43.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@next/env": "^15.4.2",
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.3.0",
