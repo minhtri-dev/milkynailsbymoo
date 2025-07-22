@@ -10,14 +10,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <head>
-            <title>Milky Nails by Moo</title>
-            <meta name="viewport" content="width=device-width" />
-            <link rel="icon" href="/blue_logo_transparent_crop.png" />
+          <title>Milky Nails by Moo</title>
+          <meta name="viewport" content="width=device-width" />
+          <link rel="icon" href="/blue_logo_transparent_crop.png" />
         </head>
         <Navbar />
-            <body>
-            {children}
-            </body>
+        <body>{children}</body>
         <Footer />
       </body>
     </html>
