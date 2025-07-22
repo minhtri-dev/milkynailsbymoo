@@ -8,6 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <body>
         <head>
             <title>Milky Nails by Moo</title>
             <meta name="viewport" content="width=device-width" />
@@ -18,6 +19,7 @@ export default function RootLayout({
             {children}
             </body>
         <Footer />
+      </body>
     </html>
   )
 }
