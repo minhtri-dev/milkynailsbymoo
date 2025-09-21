@@ -39,3 +39,31 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+terraform.tfstate.backup
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Local-only overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local CLI config
+.terraformrc
+terraform.rc
+
+# Plan artifacts
+*.tfplan
+*.plan
