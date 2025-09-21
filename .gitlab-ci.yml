@@ -1,39 +1,145 @@
-stages:
-  - install
-  - lint
-  - build
+stages: [install, lint, test, build, docker, deploy]
 
 variables:
   NODE_VERSION: "22"
 
-default:
+# JS jobs (Node image)
+.default_node:
   image: node:${NODE_VERSION}
   before_script:
     - npm ci
 
 install_dependencies:
   stage: install
+  extends: .default_node
   script:
     - echo "Dependencies installed"
-  tags:
-    - frontend
   rules:
-    - if: '$CI_COMMIT_BRANCH == "dev"'
+    - if: '$CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"'
 
 lint:
   stage: lint
+  extends: .default_node
   script:
     - npm run lint
-  tags:
-    - frontend
   rules:
-    - if: '$CI_COMMIT_BRANCH == "dev"'
+    - if: '$CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"'
 
-build:
+test:
+  stage: test
+  extends: .default_node
+  script:
+    - npm test
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"'
+
+build_web:
   stage: build
+  extends: .default_node
   script:
     - npm run build
-  tags:
-    - frontend
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"'
+  artifacts:
+    when: always
+    paths:
+      - .next
+
+# Docker build+push (uses docker:dind and installs awscli)
+docker_build_push:
+  stage: docker
+  image: docker:27
+  services:
+    - docker:27-dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - apk add --no-cache python3 py3-pip jq
+    - pip install --no-cache-dir awscli
+    # Derive env (dev/main -> dev/prod)
+    - |
+      if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+        export ENV=prod
+      else
+        export ENV=dev
+      fi
+    - export ECR_REPO="${APP_NAME}-${ENV}"
+    - export IMAGE_TAG="${CI_COMMIT_SHORT_SHA}"
+    - export REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+    - aws ecr get-login-password --region "$AWS_DEFAULT_REGION" | docker login --username AWS --password-stdin "$REGISTRY"
+  script:
+    - echo "Image repo: $ECR_REPO; tag: $IMAGE_TAG"
+    - docker build -t "$REGISTRY/$ECR_REPO:$IMAGE_TAG" .
+    # On main also tag as latest
+    - |
+      if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+        docker tag "$REGISTRY/$ECR_REPO:$IMAGE_TAG" "$REGISTRY/$ECR_REPO:latest"
+      fi
+    - docker push "$REGISTRY/$ECR_REPO:$IMAGE_TAG"
+    - |
+      if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+        docker push "$REGISTRY/$ECR_REPO:latest"
+      fi
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"'
+  artifacts:
+    expire_in: 1 day
+    reports:
+      dotenv: build.env
+  after_script:
+    # Export ENV and IMAGE_TAG for next jobs
+    - echo "ENV=$ENV" >> build.env
+    - echo "IMAGE_TAG=$IMAGE_TAG" >> build.env
+
+# Terraform deploy
+.terraform_base:
+  image: hashicorp/terraform:1.8.5
+  variables:
+    TF_IN_AUTOMATION: "true"
+    TF_INPUT: "0"
+  before_script:
+    - terraform -version
+    - |
+      # Use per-branch state key
+      if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+        export ENV=prod
+      else
+        export ENV=dev
+      fi
+      export TF_STATE_KEY="envs/${ENV}/terraform.tfstate"
+      echo "Using state key: $TF_STATE_KEY"
+    - terraform init -reconfigure \
+        -backend-config="bucket=${S3_STATE_BUCKET}" \
+        -backend-config="key=${TF_STATE_KEY}" \
+        -backend-config="region=${AWS_DEFAULT_REGION}"
+
+tf_apply_repo:
+  stage: deploy
+  extends: .terraform_base
+  needs: ["docker_build_push"]
+  script:
+    # Ensure ECR repo exists (managed by TF)
+    - terraform apply -auto-approve -target=aws_ecr_repository.app
+      -var="app_name=${APP_NAME}"
+      -var="environment=${ENV}"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"'
+
+tf_apply_all:
+  stage: deploy
+  extends: .terraform_base
+  needs: ["docker_build_push", "tf_apply_repo"]
+  script:
+    - |
+      # IMAGE_TAG comes from docker_build_push artifacts
+      echo "Deploying image tag: ${IMAGE_TAG} to ${ENV}"
+    - terraform apply -auto-approve
+      -var="app_name=${APP_NAME}"
+      -var="environment=${ENV}"
+      -var="image_tag=${IMAGE_TAG}"
   rules:
     - if: '$CI_COMMIT_BRANCH == "dev"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+      allow_failure: false
