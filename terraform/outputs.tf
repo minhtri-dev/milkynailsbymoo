@@ -1,8 +1,3 @@
-output "api_endpoint" {
-	value = module.lambda.http_api_endpoint
+output "cloudfront_domain_name" {
+  value = "https://${module.cloudfront.cloudfront_distribution_domain_name}"
 }
-
-output "lambda_name" {
-	value = module.lambda.lambda_function_name
-}
-
