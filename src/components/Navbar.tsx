@@ -1,8 +1,8 @@
 'use client'
+/* eslint-disable @next/next/no-img-element */
 
 import { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
       }}
     >
       <div className="flex items-center">
-        <Image
+        <img
           src="/white_logo_transparent.png"
           alt="White Logo"
           className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-100' : 'opacity-0'} cursor-pointer`}
@@ -46,7 +46,7 @@ const Navbar = () => {
           height={50}
           onClick={() => void router.push('/')}
         />
-        <Image
+        <img
           src="/blue_logo_transparent.png"
           alt="Blue Logo"
           className={`absolute transition-opacity duration-500 ${isHome && isTop && !isHover ? 'opacity-0' : 'opacity-100'} cursor-pointer`}

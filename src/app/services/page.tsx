@@ -1,4 +1,4 @@
-import { ServiceCard} from '@components'
+import { ServiceCard } from '@components'
 
 const services = [
   {
@@ -64,7 +64,7 @@ const Service = () => {
     <>
       <section className="bg-background-light bg-cover bg-center">
         <div>
-          <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
+          <h1 className="text-midnight pt-30 mb-20 text-center text-5xl font-bold">
             Services
           </h1>
         </div>

@@ -8,16 +8,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <head>
-            <title>Milky Nails by Moo</title>
-            <meta name="viewport" content="width=device-width" />
-            <link rel="icon" href="/blue_logo_transparent_crop.png" />
-        </head>
+      <head>
+        <title>Milky Nails by Moo</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" href="/blue_logo_transparent_crop.png" />
+      </head>
+      <body>
         <Navbar />
-            <body>
-            {children}
-            </body>
+        {children}
         <Footer />
+      </body>
     </html>
   )
 }

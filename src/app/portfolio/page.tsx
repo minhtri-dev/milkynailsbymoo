@@ -18,16 +18,16 @@ const images = [
 // TODO: Change to use Instagram photos for images
 const Portfolio = () => {
   return (
-      <section className="from-background-light to-cream relative bg-gradient-to-b">
-        <h1 className="text-midnight mt-30 mb-20 text-center text-5xl font-bold">
-          Portfolio
-        </h1>
-        <div className="mx-auto max-w-120 columns-2 gap-4 space-y-4 p-4 md:max-w-4xl md:columns-4">
-          {images.map((img, index) => (
-            <PortfolioFallback key={index} src={img.src} l={img.l} />
-          ))}
-        </div>
-      </section>
+    <section className="from-background-light to-cream relative bg-gradient-to-b h-screen">
+      <h1 className="text-midnight pt-30 mb-20 text-center text-5xl font-bold">
+        Portfolio
+      </h1>
+      <div className="mx-auto max-w-120 columns-2 gap-4 space-y-4 p-4 md:max-w-4xl md:columns-4">
+        {images.map((img, index) => (
+          <PortfolioFallback key={index} src={img.src} l={img.l} />
+        ))}
+      </div>
+    </section>
   )
 }
 
